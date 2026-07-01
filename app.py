@@ -119,6 +119,49 @@ with col3:
         df['Data'].max().strftime("%d/%m/%Y")
     )
 
+st.markdown("---")
+
+st.header("🔬 Metodologia")
+
+st.markdown("""
+Este projeto foi desenvolvido seguindo um pipeline clássico de Machine Learning.
+
+### 1️⃣ Coleta dos dados
+
+Os dados históricos do preço diário do petróleo Brent (FOB) foram obtidos através do **IPEA Data**, abrangendo o período de **1987 a 2026**.
+
+### 2️⃣ Tratamento dos dados
+
+- Ordenação cronológica dos registros;
+- Remoção de valores ausentes;
+- Preparação da base para modelagem.
+
+### 3️⃣ Engenharia de atributos
+
+Foram criadas cinco variáveis de atraso (**Lag_1** até **Lag_5**), representando os cinco preços imediatamente anteriores.
+
+Essas variáveis são utilizadas como entrada do algoritmo para prever o próximo preço.
+
+### 4️⃣ Treinamento do modelo
+
+Foi utilizado o algoritmo **Random Forest Regressor**, configurado com:
+
+- 200 árvores de decisão;
+- random_state = 42.
+
+### 5️⃣ Avaliação
+
+O desempenho foi avaliado utilizando:
+
+- MAE (Erro Absoluto Médio);
+- RMSE (Raiz do Erro Quadrático Médio);
+- R² (Coeficiente de Determinação).
+
+### 6️⃣ Predição
+
+Após o treinamento, o modelo realiza automaticamente a previsão do próximo preço utilizando os cinco últimos preços observados.
+""")
+
 st.markdown('### 🗂️ Últimos registros')
 st.dataframe(df[['Data','Preco']].tail(10),use_container_width=True)
 
