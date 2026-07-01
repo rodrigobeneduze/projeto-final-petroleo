@@ -48,7 +48,7 @@ Além da modelagem preditiva, o projeto demonstra todas as etapas de um pipeline
 O projeto segue um pipeline completo de Ciência de Dados.
 
 <p align="center">
-<img src="arquitetura.png" width="100%">
+<img src="arquitetura-projeto.png" width="100%">
 </p>
 
 ---
