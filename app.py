@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import numpy as np
@@ -75,13 +76,53 @@ st.dataframe(df[['Data','Preco']].tail(10),use_container_width=True)
 graf=df.copy()
 graf['MM30']=graf['Preco'].rolling(30).mean()
 
-st.markdown('### 📉 Histórico do preço')
-fig,ax=plt.subplots(figsize=(12,5))
-ax.plot(graf['Data'],graf['Preco'],label='Preço')
-ax.plot(graf['Data'],graf['MM30'],label='Média móvel 30 dias')
-ax.grid(True)
-ax.legend()
-st.pyplot(fig)
+st.subheader("📉 Histórico do preço")
+
+fig = go.Figure()
+
+# Série histórica
+fig.add_trace(
+    go.Scatter(
+        x=df["Data"],
+        y=df["Preco"],
+        mode="lines",
+        name="Preço",
+        line=dict(width=2)
+    )
+)
+
+# Média móvel
+fig.add_trace(
+    go.Scatter(
+        x=df["Data"],
+        y=df["Preco"].rolling(30).mean(),
+        mode="lines",
+        name="Média móvel (30 dias)",
+        line=dict(dash="dash")
+    )
+)
+
+# Último ponto
+fig.add_trace(
+    go.Scatter(
+        x=[df["Data"].iloc[-1]],
+        y=[df["Preco"].iloc[-1]],
+        mode="markers",
+        marker=dict(size=10),
+        name="Último preço"
+    )
+)
+
+fig.update_layout(
+    title="Histórico do preço do Petróleo Brent",
+    xaxis_title="Ano",
+    yaxis_title="Preço (US$)",
+    hovermode="x unified",
+    template="plotly_white",
+    height=550
+)
+
+st.plotly_chart(fig, use_container_width=True)
 
 # ===============================
 # Comparação entre valores reais e previstos
