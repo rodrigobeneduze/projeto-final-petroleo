@@ -43,11 +43,11 @@ y_train,y_test=y.iloc[:div],y.iloc[div:]
 modelo=RandomForestRegressor(n_estimators=200,random_state=42)
 modelo.fit(X_train,y_train)
 
-pred=modelo.predict(X_test)
+pred = modelo.predict(X_test)
 
-mae=mean_absolute_error(y_test,pred)
-rmse=np.sqrt(mean_squared_error(y_test,pred))
-r2=r2_score(y_test,pred)
+mae = mean_absolute_error(y_test,pred)
+rmse = np.sqrt(mean_squared_error(y_test,pred))
+r2 = r2_score(y_test,pred)
 
 ultimos=base['Preco'].tail(5).tolist()
 entrada=pd.DataFrame([{'Lag_1':ultimos[4],'Lag_2':ultimos[3],'Lag_3':ultimos[2],'Lag_4':ultimos[1],'Lag_5':ultimos[0]}])
@@ -82,6 +82,34 @@ ax.plot(graf['Data'],graf['MM30'],label='Média móvel 30 dias')
 ax.grid(True)
 ax.legend()
 st.pyplot(fig)
+
+# ===============================
+# Comparação entre valores reais e previstos
+# ===============================
+
+st.markdown("### 📊 Comparação: Valores Reais x Valores Previstos")
+
+fig2, ax2 = plt.subplots(figsize=(12,5))
+
+ax2.plot(
+    y_test.values,
+    label="Valor Real",
+    linewidth=2
+)
+
+ax2.plot(
+    pred,
+    label="Previsão",
+    linestyle="--",
+    linewidth=2
+)
+
+ax2.set_xlabel("Observações")
+ax2.set_ylabel("Preço (US$)")
+ax2.grid(True)
+ax2.legend()
+
+st.pyplot(fig2)
 
 st.markdown('### 🤖 Desempenho do Modelo')
 m1,m2,m3=st.columns(3)
