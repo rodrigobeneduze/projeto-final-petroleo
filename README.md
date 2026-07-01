@@ -22,7 +22,7 @@ O projeto contempla todas as etapas de um pipeline de Ciência de Dados, desde a
 
 ## Aplicação Online
 
-👉 [https://SEU-LINK-STREAMLIT.streamlit.app](https://projeto-final-petroleo-etefgwugyj9u7zcapzeipe.streamlit.app/)
+👉 https://projeto-final-petroleo-etefgwugyj9u7zcapzeipe.streamlit.app/
 
 O dashboard permite:
 
