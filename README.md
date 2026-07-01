@@ -4,7 +4,29 @@
 
 # 🛢️ Previsão do Preço do Petróleo Brent (FOB)
 
-Projeto para Pós-Graduação em Data Analytics - FIAP.
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-2.x-150458?logo=pandas)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-RandomForest-orange?logo=scikitlearn)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive-blue?logo=plotly)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red?logo=streamlit)
+![License](https://img.shields.io/badge/Projeto-Acadêmico-success)
+
+Projeto desenvolvido para a Pós-Graduação em Data Analytics - FIAP.
+
+---
+
+## 📊 Sobre o Projeto
+
+Este projeto aplica técnicas de Machine Learning para prever o próximo preço diário do petróleo Brent (FOB) utilizando dados históricos disponibilizados pelo IPEA Data.
+
+Foi desenvolvido como projeto final da Pós-Graduação em Data Analytics (FIAP), contemplando todas as etapas de um pipeline de Ciência de Dados:
+
+- Coleta dos dados
+- Tratamento
+- Engenharia de atributos
+- Treinamento do modelo
+- Avaliação
+- Deploy utilizando Streamlit
 
 ---
 
@@ -13,6 +35,23 @@ Projeto para Pós-Graduação em Data Analytics - FIAP.
 Desenvolver um modelo de Machine Learning capaz de prever o próximo preço diário do petróleo Brent (FOB), utilizando dados históricos disponibilizados pelo IPEA Data.
 
 O projeto demonstra todas as etapas de um pipeline de Data Science, desde a preparação dos dados até a avaliação do modelo e disponibilização em uma aplicação web utilizando Streamlit.
+
+---
+
+## 🚀 Demonstração
+
+### Aplicação Online
+
+👉 https://projeto-final-petroleo-etefgwugyj9u7zcapzeipe.streamlit.app/
+
+O dashboard permite:
+
+- visualizar o histórico completo do petróleo Brent;
+- prever automaticamente o próximo preço;
+- analisar indicadores do modelo;
+- explorar gráficos interativos;
+- verificar a importância das variáveis;
+- baixar a base utilizada.
 
 ---
 
