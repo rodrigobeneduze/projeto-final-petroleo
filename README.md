@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="banner.png" width="100%">
+</p>
+
 # 🛢️ Previsão do Preço do Petróleo Brent (FOB)
 
 Projeto para Pós-Graduação em Data Analytics - FIAP.
