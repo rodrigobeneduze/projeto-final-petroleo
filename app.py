@@ -70,6 +70,43 @@ if delta>=0:
 else:
     st.warning(f'O modelo estima queda de aproximadamente US$ {abs(delta):.2f}.')
 
+st.subheader("📊 Resumo Executivo")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric(
+        "Período",
+        f"{df['Data'].min().year} - {df['Data'].max().year}"
+    )
+
+    st.metric(
+        "Total de registros",
+        f"{len(df):,}".replace(",", ".")
+    )
+
+with col2:
+    st.metric(
+        "Preço médio",
+        f"US$ {df['Preco'].mean():.2f}"
+    )
+
+    st.metric(
+        "Preço mínimo",
+        f"US$ {df['Preco'].min():.2f}"
+    )
+
+with col3:
+    st.metric(
+        "Preço máximo",
+        f"US$ {df['Preco'].max():.2f}"
+    )
+
+    st.metric(
+        "Última atualização",
+        df['Data'].max().strftime("%d/%m/%Y")
+    )
+
 st.markdown('### 🗂️ Últimos registros')
 st.dataframe(df[['Data','Preco']].tail(10),use_container_width=True)
 
