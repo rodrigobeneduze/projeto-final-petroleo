@@ -12,11 +12,22 @@ st.set_page_config(
 st.title("🛢️ Previsão do Preço do Petróleo Brent (FOB)")
 
 st.markdown("""
-Aplicação desenvolvida como projeto final da Pós-Graduação em Data Analytics.
+### Projeto Pós-Graduação em Data Analytics
 
-O modelo utiliza **Random Forest Regressor** para estimar o próximo preço do petróleo Brent com base nos cinco últimos preços observados.
+Esta aplicação utiliza técnicas de **Machine Learning** para prever o próximo preço diário do petróleo Brent (FOB), utilizando dados históricos disponibilizados pelo **IPEA Data**.
+
+### Modelo utilizado
+
+✅ Random Forest Regressor
+
+### Objetivo
+
+Auxiliar a tomada de decisão através da previsão do comportamento do preço do petróleo utilizando os cinco preços anteriores como variáveis preditoras.
+
+### Fonte dos dados
+
+IPEA Data
 """)
-
 
 
 df = pd.read_excel("BASE.xlsx")
