@@ -17,12 +17,35 @@ Aplicação desenvolvida como projeto final da Pós-Graduação em Data Analytic
 O modelo utiliza **Random Forest Regressor** para estimar o próximo preço do petróleo Brent com base nos cinco últimos preços observados.
 """)
 
-# Carregando dados
-modelo = joblib.load("modelo_petroleo.pkl")
+
 
 df = pd.read_excel("BASE.xlsx")
 df.columns = ["Data", "Preco"]
 df = df.sort_values("Data")
+
+# Criando as variáveis de atraso (lags)
+
+df["Lag_1"] = df["Preco"].shift(1)
+df["Lag_2"] = df["Preco"].shift(2)
+df["Lag_3"] = df["Preco"].shift(3)
+df["Lag_4"] = df["Preco"].shift(4)
+df["Lag_5"] = df["Preco"].shift(5)
+
+df = df.dropna()
+
+# Treinando o modelo
+
+from sklearn.ensemble import RandomForestRegressor
+
+X = df[["Lag_1","Lag_2","Lag_3","Lag_4","Lag_5"]]
+y = df["Preco"]
+
+modelo = RandomForestRegressor(
+    n_estimators=200,
+    random_state=42
+)
+
+modelo.fit(X, y)
 
 st.subheader("Últimos registros")
 
