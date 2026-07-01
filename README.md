@@ -10,15 +10,10 @@
 ![License](https://img.shields.io/badge/Projeto-Acadêmico-success)
 
 # 🛢️ Previsão do Preço do Petróleo Brent (FOB)
-Projeto desenvolvido para a Pós-Graduação em Data Analytics - FIAP.
-
----
-
-## 📊 Sobre o Projeto
 
 Este projeto aplica técnicas de Machine Learning para prever o próximo preço diário do petróleo Brent (FOB) utilizando dados históricos disponibilizados pelo IPEA Data.
 
-Foi desenvolvido como projeto final da Pós-Graduação em Data Analytics (FIAP), contemplando todas as etapas de um pipeline de Ciência de Dados:
+Foi desenvolvido como projeto da Pós-Graduação em Data Analytics (FIAP), contemplando todas as etapas de um pipeline de Ciência de Dados:
 
 - Coleta dos dados
 - Tratamento
