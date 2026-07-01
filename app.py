@@ -64,11 +64,29 @@ st.dataframe(df[["Data","Preco"]].tail())
 
 ultimo_preco = df["Preco"].iloc[-1]
 
-st.metric(
-    label="Último preço registrado",
-    value=f"US$ {ultimo_preco:.2f}"
-)
+col1, col2, col3 = st.columns(3)
 
+diferenca = previsao - ultimo_preco
+
+with col1:
+    st.metric(
+        "Último preço",
+        f"US$ {ultimo_preco:.2f}"
+    )
+
+with col2:
+    st.metric(
+        "Próxima previsão",
+        f"US$ {previsao:.2f}",
+        delta=f"{diferenca:.2f}"
+    )
+
+with col3:
+
+    if diferenca >= 0:
+        st.success("📈 Tendência de Alta")
+    else:
+        st.error("📉 Tendência de Queda")
 ultimos = df["Preco"].tail(5).tolist()
 
 entrada = pd.DataFrame([{
