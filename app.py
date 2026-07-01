@@ -60,7 +60,7 @@ modelo.fit(X, y)
 
 st.subheader("Últimos registros")
 
-st.dataframe(df.tail())
+st.dataframe(df[["Data","Preco"]].tail())
 
 ultimo_preco = df["Preco"].iloc[-1]
 
