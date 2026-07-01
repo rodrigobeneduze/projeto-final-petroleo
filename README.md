@@ -54,6 +54,14 @@ O dashboard permite:
 
 ---
 
+# 🏗️ Arquitetura da Solução
+
+O projeto segue um pipeline completo de Ciência de Dados, desde a obtenção dos dados históricos até a disponibilização do modelo em uma aplicação web interativa.
+
+![Arquitetura da Solução](arquitetura-projeto.png)
+
+---
+
 # Fonte dos dados
 
 IPEA Data
