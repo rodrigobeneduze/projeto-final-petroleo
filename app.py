@@ -189,6 +189,52 @@ ax2.legend()
 
 st.pyplot(fig2)
 
+st.subheader("🧠 Importância das Variáveis")
+
+import plotly.express as px
+
+importancia = pd.DataFrame({
+    "Variável": X.columns,
+    "Importância": modelo.feature_importances_
+})
+
+importancia = importancia.sort_values(
+    "Importância",
+    ascending=True
+)
+
+fig_importancia = px.bar(
+    importancia,
+    x="Importância",
+    y="Variável",
+    orientation="h",
+    text="Importância",
+    title="Contribuição de cada variável para a previsão"
+)
+
+fig_importancia.update_traces(
+    texttemplate="%{text:.2%}",
+    textposition="outside"
+)
+
+fig_importancia.update_layout(
+    template="plotly_white",
+    height=420
+)
+
+st.plotly_chart(fig_importancia, use_container_width=True)
+
+variavel = importancia.iloc[-1]["Variável"]
+
+st.info(
+    f"""
+A variável mais importante para o modelo foi **{variavel}**.
+
+Isso indica que o preço observado mais recentemente exerce a maior influência
+na previsão do próximo preço do petróleo Brent.
+"""
+)
+
 st.markdown('### 🤖 Desempenho do Modelo')
 m1,m2,m3=st.columns(3)
 m1.metric('MAE',f'{mae:.2f}')
