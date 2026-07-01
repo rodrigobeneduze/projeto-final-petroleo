@@ -2,8 +2,6 @@
   <img src="banner.png" width="100%">
 </p>
 
-# 🛢️ Previsão do Preço do Petróleo Brent (FOB)
-
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-2.x-150458?logo=pandas)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-RandomForest-orange?logo=scikitlearn)
@@ -11,6 +9,7 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red?logo=streamlit)
 ![License](https://img.shields.io/badge/Projeto-Acadêmico-success)
 
+# 🛢️ Previsão do Preço do Petróleo Brent (FOB)
 Projeto desenvolvido para a Pós-Graduação em Data Analytics - FIAP.
 
 ---
