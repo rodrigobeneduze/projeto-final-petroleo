@@ -246,3 +246,54 @@ st.download_button('📥 Baixar base em CSV',csv,'base_petroleo.csv','text/csv')
 
 st.divider()
 st.caption('Projeto desenvolvido para a Pós-Graduação em Data Analytics | Python • Pandas • Scikit-Learn • Streamlit')
+
+st.divider()
+
+st.subheader("📌 Conclusões do Projeto")
+
+st.success(f"""
+### Avaliação do Modelo
+
+O modelo **Random Forest Regressor** apresentou excelente desempenho na previsão do preço do petróleo Brent.
+
+**Principais resultados:**
+
+- ✅ Coeficiente de determinação (**R²**) de **{r2:.3f}**, indicando elevada capacidade explicativa do modelo.
+
+- ✅ Erro Absoluto Médio (**MAE**) de apenas **US$ {mae:.2f}**, demonstrando alta precisão nas previsões.
+
+- ✅ Erro Quadrático Médio (**RMSE**) de **US$ {rmse:.2f}**, indicando boa estabilidade nas estimativas.
+
+- ✅ A variável **Lag_1** foi identificada como a mais relevante para o processo de previsão, mostrando que o preço imediatamente anterior possui maior influência sobre o próximo valor observado.
+""")
+
+st.warning("""
+### ⚠️ Limitações do Modelo
+
+Apesar do excelente desempenho estatístico, este modelo utiliza exclusivamente o histórico de preços do petróleo Brent.
+
+Fatores externos como:
+
+- conflitos geopolíticos;
+- decisões da OPEP;
+- crises econômicas;
+- inflação mundial;
+- variações cambiais;
+- oferta e demanda internacional;
+
+não fazem parte das variáveis utilizadas no treinamento e podem impactar significativamente o comportamento real do mercado.
+
+Assim, este modelo deve ser utilizado como ferramenta de apoio à decisão, e não como previsão absoluta.
+""")
+
+st.divider()
+
+st.caption("""
+Projeto desenvolvido por **Rodrigo Beneduze**
+
+Pós-Graduação em Data Analytics
+
+Machine Learning • Streamlit • Python • Random Forest Regressor
+
+2026
+""")
