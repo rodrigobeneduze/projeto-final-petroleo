@@ -18,6 +18,18 @@ Modelo: Random Forest Regressor
 
 Fonte: IPEA Data
 
+Tecnologias
+
+🐍 Python
+
+📊 Pandas
+
+🤖 Scikit-Learn
+
+📈 Plotly
+
+🌐 Streamlit
+
 O modelo é treinado automaticamente a partir da base histórica.''')
 
 @st.cache_data
