@@ -127,6 +127,11 @@ https://projeto-final-petroleo-etefgwugyj9u7zcapzeipe.streamlit.app/
 
 ---
 
+# 📌 Considerações Finais
+Os resultados demonstram que o modelo Random Forest apresentou elevada capacidade preditiva (R² = 0,986), explicando aproximadamente 98,6% da variabilidade dos preços históricos do petróleo Brent. O baixo MAE e RMSE evidenciam a precisão das previsões, tornando o modelo adequado como ferramenta de apoio à tomada de decisão. Entretanto, fatores externos, como eventos geopolíticos, decisões da OPEP e oscilações econômicas globais, não são considerados pelo algoritmo e podem influenciar significativamente o comportamento futuro dos preços.
+
+---
+
 # Autor
 
 Rodrigo Beneduze
