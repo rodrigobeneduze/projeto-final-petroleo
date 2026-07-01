@@ -169,16 +169,6 @@ streamlit run app.py
 
 ---
 
-# Aplicação Online
-
-Disponível em:
-
-https://projeto-final-petroleo-etefgwugyj9u7zcapzeipe.streamlit.app/
-
----
-
-## 📸 Dashboard
-
 ## 📸 Dashboard
 
 ### 🏠 Tela Inicial
