@@ -257,9 +257,6 @@ csv=df.to_csv(index=False).encode('utf-8')
 st.download_button('📥 Baixar base em CSV',csv,'base_petroleo.csv','text/csv')
 
 st.divider()
-st.caption('Projeto desenvolvido para a Pós-Graduação em Data Analytics | Python • Pandas • Scikit-Learn • Streamlit')
-
-st.divider()
 
 st.subheader("📌 Conclusões do Projeto")
 
